@@ -29,7 +29,7 @@ tasks:
   #   config:
   #     testFile: https://raw.githubusercontent.com/ethpandaops/assertoor/refs/heads/electra-support/playbooks/pectra-dev/massive-deposit-0x02.yaml
 
-  # # EIP-2935
+  # EIP-2935
   # - name: check_consensus_slot_range
   #   title: "Wait for slot >= 42"
   #   timeout: 2h
@@ -67,7 +67,7 @@ tasks:
   #     testConfig:
   #       validatorIndex: 20
 
-  EIP-7251
+  # EIP-7251
   - name: check_consensus_slot_range
     title: "Wait for slot >= 54"
     timeout: 2h
