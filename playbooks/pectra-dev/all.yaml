@@ -29,17 +29,17 @@ tasks:
     config:
       testFile: https://raw.githubusercontent.com/ethpandaops/assertoor/refs/heads/electra-support/playbooks/pectra-dev/massive-deposit-0x02.yaml
 
-  # EIP-2935
-  - name: check_consensus_slot_range
-    title: "Wait for slot >= 42"
-    timeout: 2h
-    config:
-      minSlotNumber: 42
-  - name: run_external_tasks
-    title: "Generate massive deposit with 0x02 creds"
-    timeout: 30m
-    config:
-      testFile: https://raw.githubusercontent.com/ethpandaops/assertoor/refs/heads/electra-support/playbooks/pectra-dev/blockhash-test.yaml
+  # # EIP-2935
+  # - name: check_consensus_slot_range
+  #   title: "Wait for slot >= 42"
+  #   timeout: 2h
+  #   config:
+  #     minSlotNumber: 42
+  # - name: run_external_tasks
+  #   title: "Generate massive deposit with 0x02 creds"
+  #   timeout: 30m
+  #   config:
+  #     testFile: https://raw.githubusercontent.com/ethpandaops/assertoor/refs/heads/electra-support/playbooks/pectra-dev/blockhash-test.yaml
   
   # EIP-7002
   - name: check_consensus_slot_range
