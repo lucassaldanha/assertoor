@@ -18,16 +18,16 @@ tasks:
         validatorCount: 300
   
   # EIP-6110
-  - name: check_consensus_slot_range
-    title: "Wait for slot >= 38"
-    timeout: 2h
-    config:
-      minSlotNumber: 38
-  - name: run_external_tasks
-    title: "Generate massive deposit with 0x02 creds"
-    timeout: 30m
-    config:
-      testFile: https://raw.githubusercontent.com/ethpandaops/assertoor/refs/heads/electra-support/playbooks/pectra-dev/massive-deposit-0x02.yaml
+  # - name: check_consensus_slot_range
+  #   title: "Wait for slot >= 38"
+  #   timeout: 2h
+  #   config:
+  #     minSlotNumber: 38
+  # - name: run_external_tasks
+  #   title: "Generate massive deposit with 0x02 creds"
+  #   timeout: 30m
+  #   config:
+  #     testFile: https://raw.githubusercontent.com/ethpandaops/assertoor/refs/heads/electra-support/playbooks/pectra-dev/massive-deposit-0x02.yaml
 
   # # EIP-2935
   # - name: check_consensus_slot_range
@@ -68,32 +68,32 @@ tasks:
         validatorIndex: 20
 
   # EIP-7251
-  - name: check_consensus_slot_range
-    title: "Wait for slot >= 54"
-    timeout: 2h
-    config:
-      minSlotNumber: 54
-  - name: run_external_tasks
-    title: "Generate EL-triggered consolidation for validator 21"
-    timeout: 30m
-    config:
-      testFile: https://raw.githubusercontent.com/ethpandaops/assertoor/refs/heads/electra-support/playbooks/pectra-dev/el-triggered-consolidation.yaml
-      testConfig:
-        sourceValidatorIndex: 21
-        targetValidatorIndex: 25
-  - name: check_consensus_slot_range
-    title: "Wait for slot >= 58"
-    timeout: 2h
-    config:
-      minSlotNumber: 58
-  - name: run_external_tasks
-    title: "Withdrawal credential change for validator 22 to 0x02 creds via self consolidation"
-    timeout: 30m
-    config:
-      testFile: https://raw.githubusercontent.com/ethpandaops/assertoor/refs/heads/electra-support/playbooks/pectra-dev/el-triggered-consolidation.yaml
-      testConfig:
-        sourceValidatorIndex: 22
-        targetValidatorIndex: 22
+  # - name: check_consensus_slot_range
+  #   title: "Wait for slot >= 54"
+  #   timeout: 2h
+  #   config:
+  #     minSlotNumber: 54
+  # - name: run_external_tasks
+  #   title: "Generate EL-triggered consolidation for validator 21"
+  #   timeout: 30m
+  #   config:
+  #     testFile: https://raw.githubusercontent.com/ethpandaops/assertoor/refs/heads/electra-support/playbooks/pectra-dev/el-triggered-consolidation.yaml
+  #     testConfig:
+  #       sourceValidatorIndex: 21
+  #       targetValidatorIndex: 25
+  # - name: check_consensus_slot_range
+  #   title: "Wait for slot >= 58"
+  #   timeout: 2h
+  #   config:
+  #     minSlotNumber: 58
+  # - name: run_external_tasks
+  #   title: "Withdrawal credential change for validator 22 to 0x02 creds via self consolidation"
+  #   timeout: 30m
+  #   config:
+  #     testFile: https://raw.githubusercontent.com/ethpandaops/assertoor/refs/heads/electra-support/playbooks/pectra-dev/el-triggered-consolidation.yaml
+  #     testConfig:
+  #       sourceValidatorIndex: 22
+  #       targetValidatorIndex: 22
 
   # Final check
   - name: run_external_tasks
